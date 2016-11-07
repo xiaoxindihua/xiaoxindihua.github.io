@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="技术,iOS," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -84,28 +84,16 @@
 
 
 
-<meta name="description" content="圆角图片是开发中经常使用到的技术，一般可以使用以下几种方式实现。一、通过代码方式
-self.view.layer.cornerRadius = 5;self.view.layer.masksToBounds = YES;二、通过在xib中设置通过kvc设置layer.cornerRadius和layer.masksToBounds的值
-三、通过绘制图片方式
-
-(UIImage )circleIma">
+<meta name="description" content="鼓捣到早上五点钟，页面终于能够显示，也能够和域名（luoxin.in）绑定了,接下来就该每天写写blog。刚刚更新发现还是不够稳定，慢慢来吧。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="圆角图片的几种实现方式">
-<meta property="og:url" content="https://www.luoxin.in/2016/10/26/圆角图片的几种实现方式/index.html">
+<meta property="og:title" content="终于能够显示了">
+<meta property="og:url" content="https://www.luoxin.in/2016/10/22/终于能够显示了 copy 2/index.html">
 <meta property="og:site_name" content="LuoXin">
-<meta property="og:description" content="圆角图片是开发中经常使用到的技术，一般可以使用以下几种方式实现。一、通过代码方式
-self.view.layer.cornerRadius = 5;self.view.layer.masksToBounds = YES;二、通过在xib中设置通过kvc设置layer.cornerRadius和layer.masksToBounds的值
-三、通过绘制图片方式
-
-(UIImage )circleIma">
-<meta property="og:updated_time" content="2016-11-07T03:58:04.000Z">
+<meta property="og:description" content="鼓捣到早上五点钟，页面终于能够显示，也能够和域名（luoxin.in）绑定了,接下来就该每天写写blog。刚刚更新发现还是不够稳定，慢慢来吧。">
+<meta property="og:updated_time" content="2016-10-23T23:09:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="圆角图片的几种实现方式">
-<meta name="twitter:description" content="圆角图片是开发中经常使用到的技术，一般可以使用以下几种方式实现。一、通过代码方式
-self.view.layer.cornerRadius = 5;self.view.layer.masksToBounds = YES;二、通过在xib中设置通过kvc设置layer.cornerRadius和layer.masksToBounds的值
-三、通过绘制图片方式
-
-(UIImage )circleIma">
+<meta name="twitter:title" content="终于能够显示了">
+<meta name="twitter:description" content="鼓捣到早上五点钟，页面终于能够显示，也能够和域名（luoxin.in）绑定了,接下来就该每天写写blog。刚刚更新发现还是不够稳定，慢慢来吧。">
 
 
 
@@ -126,10 +114,10 @@ self.view.layer.cornerRadius = 5;self.view.layer.masksToBounds = YES;二、通�
 
 
 
-  <link rel="canonical" href="https://www.luoxin.in/2016/10/26/圆角图片的几种实现方式/"/>
+  <link rel="canonical" href="https://www.luoxin.in/2016/10/22/终于能够显示了 copy 2/"/>
 
 
-  <title> 圆角图片的几种实现方式 | LuoXin </title>
+  <title> 终于能够显示了 | LuoXin </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -259,7 +247,7 @@ self.view.layer.cornerRadius = 5;self.view.layer.masksToBounds = YES;二、通�
             
             
               
-                圆角图片的几种实现方式
+                终于能够显示了
               
             
           </h1>
@@ -271,8 +259,8 @@ self.view.layer.cornerRadius = 5;self.view.layer.masksToBounds = YES;二、通�
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-26T05:41:26+08:00" content="2016-10-26">
-              2016-10-26
+            <time itemprop="dateCreated" datetime="2016-10-22T05:41:26+08:00" content="2016-10-22">
+              2016-10-22
             </time>
           </span>
 
@@ -299,14 +287,7 @@ self.view.layer.cornerRadius = 5;self.view.layer.masksToBounds = YES;二、通�
       
 
       
-        <p>圆角图片是开发中经常使用到的技术，一般可以使用以下几种方式实现。<br>一、通过代码方式</p>
-<p>self.view.layer.cornerRadius = 5;<br>self.view.layer.masksToBounds = YES;<br>二、通过在xib中设置<br>通过kvc设置layer.cornerRadius和layer.masksToBounds的值</p>
-<p>三、通过绘制图片方式</p>
-<ul>
-<li>(UIImage )circleImage<br>{<br>// 图形上下文<br>UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0);<br>// 获得上下文<br>CGContextRef ctx = UIGraphicsGetCurrentContext();<br>// 设置范围<br>CGRect rect = CGRectMake(0, 0, self.size.width, self.size.height);<br>//根据rect创建<br>CGContextAddEllipseInRect(ctx, rect);<br>// 裁剪<br>CGContextClip(ctx);<br>// 将图片绘制到图形上下文<br>[self drawInRect:rect];<br>//获取裁剪后图片<br>UIImage image = UIGraphicsGetImageFromCurrentImageContext();<br>//关闭上下文<br>UIGraphicsEndImageContext();<br>//生成图片<br>return image;<br>}<br>四、通过贝赛尔曲线</li>
-</ul>
-<p>UIImageView imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];<br>imageView.center = CGPointMake(200, 300);<br>UIImage anotherImage = [UIImage imageNamed:@”image”];<br>UIGraphicsBeginImageContextWithOptions(imageView.bounds. size, NO, 1.0);<br>[[UIBezierPath bezierPathWithRoundedRect:imageView.bounds cornerRadius:50] addClip];<br>[anotherImage drawInRect:imageView.bounds];<br>imageView.image =UIGraphicsGetImageFromCurrentImageContext();<br>UIGraphicsEndImageContext();<br>[self.view addSubview:imageView];<br>五、通过第三方框架</p>
-<p>HJCornerRadius</p>
+        <p>鼓捣到早上五点钟，页面终于能够显示，也能够和域名（luoxin.in）绑定了,接下来就该每天写写blog。<br>刚刚更新发现还是不够稳定，慢慢来吧。</p>
 
       
     </div>
@@ -327,29 +308,21 @@ self.view.layer.cornerRadius = 5;self.view.layer.masksToBounds = YES;二、通�
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/技术/" rel="tag">#技术</a>
-          
-            <a href="/tags/iOS/" rel="tag">#iOS</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/10/24/git常用命令/" rel="next" title="git常用命令">
-                <i class="fa fa-chevron-left"></i> git常用命令
+              <a href="/2016/10/22/终于能够显示了 copy 3/" rel="next" title="终于能够显示了">
+                <i class="fa fa-chevron-left"></i> 终于能够显示了
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/11/05/hexo常用命令/" rel="prev" title="hexo常用命令">
-                hexo常用命令 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/10/24/git常用命令/" rel="prev" title="git常用命令">
+                git常用命令 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -418,7 +391,7 @@ self.view.layer.cornerRadius = 5;self.view.layer.masksToBounds = YES;二、通�
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -428,7 +401,7 @@ self.view.layer.cornerRadius = 5;self.view.layer.masksToBounds = YES;二、通�
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
