@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="技术,iOS," />
 
 
 
@@ -84,15 +84,16 @@
 
 
 
-<meta name="description" content="学习是一种生活方式!!">
-<meta property="og:type" content="website">
-<meta property="og:title" content="LuoXin">
-<meta property="og:url" content="https://xiaoxindihua.github.io/tags/滑雪/index.html">
+<meta name="description" content="测试一个项目时，报错“This app has crashed because it attempted to access privacy-sensitive data without a usage description.  The app’s Info.plist must contain an NSCameraUsageDescription key with a string valu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="相机权限获取">
+<meta property="og:url" content="https://xiaoxindihua.github.io/2016/12/22/相机权限获取/index.html">
 <meta property="og:site_name" content="LuoXin">
-<meta property="og:description" content="学习是一种生活方式!!">
+<meta property="og:description" content="测试一个项目时，报错“This app has crashed because it attempted to access privacy-sensitive data without a usage description.  The app’s Info.plist must contain an NSCameraUsageDescription key with a string valu">
+<meta property="og:updated_time" content="2016-12-22T15:55:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LuoXin">
-<meta name="twitter:description" content="学习是一种生活方式!!">
+<meta name="twitter:title" content="相机权限获取">
+<meta name="twitter:description" content="测试一个项目时，报错“This app has crashed because it attempted to access privacy-sensitive data without a usage description.  The app’s Info.plist must contain an NSCameraUsageDescription key with a string valu">
 
 
 
@@ -113,10 +114,10 @@
 
 
 
-  <link rel="canonical" href="https://xiaoxindihua.github.io/tags/滑雪/"/>
+  <link rel="canonical" href="https://xiaoxindihua.github.io/2016/12/22/相机权限获取/"/>
 
 
-  <title> 标签: 滑雪 | LuoXin </title>
+  <title> 相机权限获取 | LuoXin </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -137,7 +138,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right  ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -225,46 +226,124 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        滑雪
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                相机权限获取
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-22T23:47:45+08:00" content="2016-12-22">
+              2016-12-22
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="//schema.org/Article">
-    <header class="post-header">
+      
+        <p>测试一个项目时，报错“This app has crashed because it attempted to access privacy-sensitive data without a usage description.  The app’s Info.plist must contain an NSCameraUsageDescription key with a string value explaining to the user how the app uses this data.”<br>根据提示，需要获取相机的使用描述。具体解决办法为在Info.plist文件中添加相关key，涉及到的相关权限获取有如下几个部分：相机、相册、联系人、麦克风。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;key&gt;NSCameraUsageDescription&lt;/key&gt;    </div><div class="line">&lt;string&gt;描述信息（选填）&lt;/string&gt;</div><div class="line"></div><div class="line">&lt;key&gt;NSPhotoLibraryUsageDescription&lt;/key&gt;</div><div class="line">&lt;string&gt;描述信息（选填）&lt;/string&gt;</div><div class="line"></div><div class="line">&lt;key&gt;NSContactsUsageDescription&lt;/key&gt;    </div><div class="line">&lt;string&gt;描述信息（选填）&lt;/string&gt;</div><div class="line"></div><div class="line">&lt;key&gt;NSMicrophoneUsageDescription&lt;/key&gt;    </div><div class="line">&lt;string&gt;描述信息（选填）&lt;/string&gt;</div></pre></td></tr></table></figure></p>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2016/11/12/滑雪的正确打开方式/" itemprop="url">
-              
-                <span itemprop="name">滑雪的正确打开方式</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-11-12T17:33:15+08:00"
-              content="2016-11-12" >
-          11-12
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/技术/" rel="tag">#技术</a>
+          
+            <a href="/tags/iOS/" rel="tag">#iOS</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/21/项目进度条展示优化/" rel="next" title="项目进度条展示优化">
+                <i class="fa fa-chevron-left"></i> 项目进度条展示优化
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -272,6 +351,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -291,8 +374,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -335,6 +427,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -438,6 +541,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
 
   
 
