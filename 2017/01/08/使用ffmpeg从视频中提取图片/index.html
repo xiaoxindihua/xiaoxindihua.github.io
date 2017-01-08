@@ -84,16 +84,16 @@
 
 
 
-<meta name="description" content="项目需求：将一段视频按照每秒一帧进行图片提取，搜索到方法“ffmpeg –i test.avi –r 1 –f image2 image-%3d.jpeg”，实际使用中报错“[NULL @ 0x7fa696801000] Unable to find a suitable output format for ‘–i’–i: Invalid argument”，stackoverflow搜索到解决方">
+<meta name="description" content="项目需求：将一段视频按照每秒一帧进行图片提取，搜索到方法“ffmpeg –i test.avi –r 1 –f image2 image-%3d.jpeg”，实际使用中报错“[NULL @ 0x7fa696801000] Unable to find a suitable output format for ‘–i’–i: Invalid argument”一、stackoverflow搜索到解决">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用ffmpeg从视频中提取图片">
 <meta property="og:url" content="https://xiaoxindihua.github.io/2017/01/08/使用ffmpeg从视频中提取图片/index.html">
 <meta property="og:site_name" content="LuoXin">
-<meta property="og:description" content="项目需求：将一段视频按照每秒一帧进行图片提取，搜索到方法“ffmpeg –i test.avi –r 1 –f image2 image-%3d.jpeg”，实际使用中报错“[NULL @ 0x7fa696801000] Unable to find a suitable output format for ‘–i’–i: Invalid argument”，stackoverflow搜索到解决方">
-<meta property="og:updated_time" content="2017-01-08T03:55:47.000Z">
+<meta property="og:description" content="项目需求：将一段视频按照每秒一帧进行图片提取，搜索到方法“ffmpeg –i test.avi –r 1 –f image2 image-%3d.jpeg”，实际使用中报错“[NULL @ 0x7fa696801000] Unable to find a suitable output format for ‘–i’–i: Invalid argument”一、stackoverflow搜索到解决">
+<meta property="og:updated_time" content="2017-01-08T03:58:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用ffmpeg从视频中提取图片">
-<meta name="twitter:description" content="项目需求：将一段视频按照每秒一帧进行图片提取，搜索到方法“ffmpeg –i test.avi –r 1 –f image2 image-%3d.jpeg”，实际使用中报错“[NULL @ 0x7fa696801000] Unable to find a suitable output format for ‘–i’–i: Invalid argument”，stackoverflow搜索到解决方">
+<meta name="twitter:description" content="项目需求：将一段视频按照每秒一帧进行图片提取，搜索到方法“ffmpeg –i test.avi –r 1 –f image2 image-%3d.jpeg”，实际使用中报错“[NULL @ 0x7fa696801000] Unable to find a suitable output format for ‘–i’–i: Invalid argument”一、stackoverflow搜索到解决">
 
 
 
@@ -287,8 +287,8 @@
       
 
       
-        <p>项目需求：将一段视频按照每秒一帧进行图片提取，搜索到方法“ffmpeg –i test.avi –r 1 –f image2 image-%3d.jpeg”，实际使用中报错<br>“[NULL @ 0x7fa696801000] Unable to find a suitable output format for ‘–i’<br>–i: Invalid argument”，<br>stackoverflow搜索到解决方法，记录如下：<br>”–”≠”-”，上述方法中的“–i”使用的是em dash,正确的应该是使用hyphen,详细区别可以查看知乎文章：<a href="https://www.zhihu.com/question/20332423/answer/15370327" target="_blank" rel="external">https://www.zhihu.com/question/20332423/answer/15370327</a></p>
-<p>从ffmpeg官网查到方法，“ffmpeg -i foo.avi -r 1 -s WxH -f image2 foo-%03d.jpeg”，This will extract one video frame per second from the video and will output them in files named foo-001.jpeg, foo-002.jpeg, etc. Images will be rescaled to fit the new WxH values.</p>
+        <p>项目需求：将一段视频按照每秒一帧进行图片提取，搜索到方法“ffmpeg –i test.avi –r 1 –f image2 image-%3d.jpeg”，实际使用中报错<br>“[NULL @ 0x7fa696801000] Unable to find a suitable output format for ‘–i’<br>–i: Invalid argument”<br>一、stackoverflow搜索到解决方法，记录如下：<br>”–”≠”-”，上述方法中的“–i”使用的是em dash,正确的应该是使用hyphen,详细区别可以查看知乎文章：<a href="https://www.zhihu.com/question/20332423/answer/15370327" target="_blank" rel="external">https://www.zhihu.com/question/20332423/answer/15370327</a></p>
+<p>二、从ffmpeg官网查到方法，“ffmpeg -i foo.avi -r 1 -s WxH -f image2 foo-%03d.jpeg”，This will extract one video frame per second from the video and will output them in files named foo-001.jpeg, foo-002.jpeg, etc. Images will be rescaled to fit the new WxH values.</p>
 <p>If you want to extract just a limited number of frames, you can use the above command in combination with the -vframes or -t option, or in combination with -ss to start extracting from a certain point in time.</p>
 
       
