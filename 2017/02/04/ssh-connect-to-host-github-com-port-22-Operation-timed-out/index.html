@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="技术,iOS," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -84,16 +84,25 @@
 
 
 
-<meta name="description" content="测试一个项目时，报错“This app has crashed because it attempted to access privacy-sensitive data without a usage description.  The app’s Info.plist must contain an NSCameraUsageDescription key with a string valu">
+<meta name="description" content="上传github是遇到错误：ssh: connect to host github.com port 22: Operation timed outstackoverflow解决办法如下：
+
+在项目目录下： git config –local -e
+将 url = git@github.com:username/repo.git 改为 url = https://github.com/userna">
 <meta property="og:type" content="article">
-<meta property="og:title" content="相机权限获取">
-<meta property="og:url" content="https://xiaoxindihua.github.io/2016/12/22/相机权限获取/index.html">
+<meta property="og:title" content="ssh: connect to host github.com port 22: Operation timed out">
+<meta property="og:url" content="https://xiaoxindihua.github.io/2017/02/04/ssh-connect-to-host-github-com-port-22-Operation-timed-out/index.html">
 <meta property="og:site_name" content="LuoXin">
-<meta property="og:description" content="测试一个项目时，报错“This app has crashed because it attempted to access privacy-sensitive data without a usage description.  The app’s Info.plist must contain an NSCameraUsageDescription key with a string valu">
-<meta property="og:updated_time" content="2016-12-22T15:55:24.000Z">
+<meta property="og:description" content="上传github是遇到错误：ssh: connect to host github.com port 22: Operation timed outstackoverflow解决办法如下：
+
+在项目目录下： git config –local -e
+将 url = git@github.com:username/repo.git 改为 url = https://github.com/userna">
+<meta property="og:updated_time" content="2017-02-04T10:16:09.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="相机权限获取">
-<meta name="twitter:description" content="测试一个项目时，报错“This app has crashed because it attempted to access privacy-sensitive data without a usage description.  The app’s Info.plist must contain an NSCameraUsageDescription key with a string valu">
+<meta name="twitter:title" content="ssh: connect to host github.com port 22: Operation timed out">
+<meta name="twitter:description" content="上传github是遇到错误：ssh: connect to host github.com port 22: Operation timed outstackoverflow解决办法如下：
+
+在项目目录下： git config –local -e
+将 url = git@github.com:username/repo.git 改为 url = https://github.com/userna">
 
 
 
@@ -114,10 +123,10 @@
 
 
 
-  <link rel="canonical" href="https://xiaoxindihua.github.io/2016/12/22/相机权限获取/"/>
+  <link rel="canonical" href="https://xiaoxindihua.github.io/2017/02/04/ssh-connect-to-host-github-com-port-22-Operation-timed-out/"/>
 
 
-  <title> 相机权限获取 | LuoXin </title>
+  <title> ssh: connect to host github.com port 22: Operation timed out | LuoXin </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -247,7 +256,7 @@
             
             
               
-                相机权限获取
+                ssh: connect to host github.com port 22: Operation timed out
               
             
           </h1>
@@ -259,8 +268,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-22T23:47:45+08:00" content="2016-12-22">
-              2016-12-22
+            <time itemprop="dateCreated" datetime="2017-02-04T18:12:17+08:00" content="2017-02-04">
+              2017-02-04
             </time>
           </span>
 
@@ -287,7 +296,12 @@
       
 
       
-        <p>测试一个项目时，报错“This app has crashed because it attempted to access privacy-sensitive data without a usage description.  The app’s Info.plist must contain an NSCameraUsageDescription key with a string value explaining to the user how the app uses this data.”<br>根据提示，需要获取相机的使用描述。具体解决办法为在Info.plist文件中添加相关key，涉及到的相关权限获取有如下几个部分：相机、相册、联系人、麦克风。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;key&gt;NSCameraUsageDescription&lt;/key&gt;    </div><div class="line">&lt;string&gt;描述信息（选填）&lt;/string&gt;</div><div class="line"></div><div class="line">&lt;key&gt;NSPhotoLibraryUsageDescription&lt;/key&gt;</div><div class="line">&lt;string&gt;描述信息（选填）&lt;/string&gt;</div><div class="line"></div><div class="line">&lt;key&gt;NSContactsUsageDescription&lt;/key&gt;    </div><div class="line">&lt;string&gt;描述信息（选填）&lt;/string&gt;</div><div class="line"></div><div class="line">&lt;key&gt;NSMicrophoneUsageDescription&lt;/key&gt;    </div><div class="line">&lt;string&gt;描述信息（选填）&lt;/string&gt;</div></pre></td></tr></table></figure></p>
+        <p>上传github是遇到错误：ssh: connect to host github.com port 22: Operation timed out<br>stackoverflow解决办法如下：</p>
+<ol>
+<li>在项目目录下： git config –local -e</li>
+<li>将 url = git@github.com:username/repo.git 改为 url = <a href="https://github.com/username/repo.git（i，进入编辑状态）" target="_blank" rel="external">https://github.com/username/repo.git（i，进入编辑状态）</a></li>
+<li>保存退出（：wq）</li>
+</ol>
 
       
     </div>
@@ -308,30 +322,18 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/技术/" rel="tag">#技术</a>
-          
-            <a href="/tags/iOS/" rel="tag">#iOS</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/21/项目进度条展示优化/" rel="next" title="项目进度条展示优化">
-                <i class="fa fa-chevron-left"></i> 项目进度条展示优化
+              <a href="/2017/01/31/“同学情廿年”/" rel="next" title="“同学情廿年”">
+                <i class="fa fa-chevron-left"></i> “同学情廿年”
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/01/06/cx-Oracle安装/" rel="prev" title="cx_Oracle安装注意事项">
-                cx_Oracle安装注意事项 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
