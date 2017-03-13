@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="技术,iOS," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -84,16 +84,15 @@
 
 
 
-<meta name="description" content="测试一个项目时，报错“This app has crashed because it attempted to access privacy-sensitive data without a usage description.  The app’s Info.plist must contain an NSCameraUsageDescription key with a string valu">
-<meta property="og:type" content="article">
-<meta property="og:title" content="相机权限获取">
-<meta property="og:url" content="https://xiaoxindihua.github.io/2016/12/22/相机权限获取/index.html">
+<meta name="description" content="学习是一种生活方式!!">
+<meta property="og:type" content="website">
+<meta property="og:title" content="LuoXin">
+<meta property="og:url" content="https://xiaoxindihua.github.io/archives/2017/03/index.html">
 <meta property="og:site_name" content="LuoXin">
-<meta property="og:description" content="测试一个项目时，报错“This app has crashed because it attempted to access privacy-sensitive data without a usage description.  The app’s Info.plist must contain an NSCameraUsageDescription key with a string valu">
-<meta property="og:updated_time" content="2016-12-22T15:55:24.000Z">
+<meta property="og:description" content="学习是一种生活方式!!">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="相机权限获取">
-<meta name="twitter:description" content="测试一个项目时，报错“This app has crashed because it attempted to access privacy-sensitive data without a usage description.  The app’s Info.plist must contain an NSCameraUsageDescription key with a string valu">
+<meta name="twitter:title" content="LuoXin">
+<meta name="twitter:description" content="学习是一种生活方式!!">
 
 
 
@@ -114,10 +113,10 @@
 
 
 
-  <link rel="canonical" href="https://xiaoxindihua.github.io/2016/12/22/相机权限获取/"/>
+  <link rel="canonical" href="https://xiaoxindihua.github.io/archives/2017/03/"/>
 
 
-  <title> 相机权限获取 | LuoXin </title>
+  <title> 归档 | LuoXin </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -138,7 +137,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right page-post-detail ">
+  <div class="container one-collumn sidebar-position-right  page-archive  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -226,128 +225,103 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-collapse">
+    <span class="archive-move-on"></span>
+
+    <span class="archive-page-counter">
+      
+      
+      
+        
+      
+      嗯..! 目前共计 15 篇日志。 继续努力。
+    </span>
+
     
 
-  
-  
+      
+      
+      
 
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
+      
         
+        <div class="collection-title">
+          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
+        </div>
+      
+      
+
+      
+
+  <article class="post post-type-normal" itemscope itemtype="//schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
+            <a class="post-title-link" href="/2017/03/13/iOS保存录制视频并上传服务器/" itemprop="url">
               
-                相机权限获取
+                <span itemprop="name">iOS保存录制视频并上传服务器</span>
               
-            
-          </h1>
+            </a>
         
+      </h1>
 
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-22T23:47:45+08:00" content="2016-12-22">
-              2016-12-22
-            </time>
-          </span>
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-03-13T00:00:00+08:00"
+              content="2017-03-13" >
+          03-13
+        </time>
+      </div>
 
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>测试一个项目时，报错“This app has crashed because it attempted to access privacy-sensitive data without a usage description.  The app’s Info.plist must contain an NSCameraUsageDescription key with a string value explaining to the user how the app uses this data.”<br>根据提示，需要获取相机的使用描述。具体解决办法为在Info.plist文件中添加相关key，涉及到的相关权限获取有如下几个部分：相机、相册、联系人、麦克风。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;key&gt;NSCameraUsageDescription&lt;/key&gt;    </div><div class="line">&lt;string&gt;描述信息（选填）&lt;/string&gt;</div><div class="line"></div><div class="line">&lt;key&gt;NSPhotoLibraryUsageDescription&lt;/key&gt;</div><div class="line">&lt;string&gt;描述信息（选填）&lt;/string&gt;</div><div class="line"></div><div class="line">&lt;key&gt;NSContactsUsageDescription&lt;/key&gt;    </div><div class="line">&lt;string&gt;描述信息（选填）&lt;/string&gt;</div><div class="line"></div><div class="line">&lt;key&gt;NSMicrophoneUsageDescription&lt;/key&gt;    </div><div class="line">&lt;string&gt;描述信息（选填）&lt;/string&gt;</div></pre></td></tr></table></figure></p>
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/技术/" rel="tag">#技术</a>
-          
-            <a href="/tags/iOS/" rel="tag">#iOS</a>
-          
-        </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2016/12/21/项目进度条展示优化/" rel="next" title="项目进度条展示优化">
-                <i class="fa fa-chevron-left"></i> 项目进度条展示优化
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/01/06/cx-Oracle安装/" rel="prev" title="cx_Oracle安装注意事项">
-                cx_Oracle安装注意事项 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
+    </header>
   </article>
 
 
 
-    <div class="post-spread">
+    
+
       
-    </div>
-  </div>
+      
+      
+
+      
+      
+
+      
+
+  <article class="post post-type-normal" itemscope itemtype="//schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/2017/03/13/ssh 和 sftp/" itemprop="url">
+              
+                <span itemprop="name">ssh 和 sftp</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-03-13T00:00:00+08:00"
+              content="2017-03-13" >
+          03-13
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+    
+
+  </section>
+
+  
+
 
 
           </div>
@@ -355,10 +329,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-  </div>
-
 
         </div>
         
@@ -378,17 +348,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -431,17 +392,6 @@
 
       </section>
 
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <p class="post-toc-empty">此文章未包含目录</p>
-            
-          </div>
-        </section>
       
 
     </div>
@@ -545,9 +495,11 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
-
+  
+    <script type="text/javascript" id="motion.page.archive">
+      $('.archive-year').velocity('transition.slideLeftIn');
+    </script>
+  
 
 
   

@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="技术,iOS," />
+  <meta name="keywords" content="技术,Linux," />
 
 
 
@@ -84,16 +84,31 @@
 
 
 
-<meta name="description" content="测试一个项目时，报错“This app has crashed because it attempted to access privacy-sensitive data without a usage description.  The app’s Info.plist must contain an NSCameraUsageDescription key with a string valu">
+<meta name="description" content="一、链接服务器
+ssh -l username 182.188.188.188 (也可以使用ssh username@182.188.188.188)
+linux常用命令
+二、sftp链接
+sftp username@182.188.188.188
+sftp常用命令：pwdPrint working directory of remote hostlpwdPrint working directo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="相机权限获取">
-<meta property="og:url" content="https://xiaoxindihua.github.io/2016/12/22/相机权限获取/index.html">
+<meta property="og:title" content="ssh 和 sftp">
+<meta property="og:url" content="https://xiaoxindihua.github.io/2017/03/13/ssh 和 sftp/index.html">
 <meta property="og:site_name" content="LuoXin">
-<meta property="og:description" content="测试一个项目时，报错“This app has crashed because it attempted to access privacy-sensitive data without a usage description.  The app’s Info.plist must contain an NSCameraUsageDescription key with a string valu">
-<meta property="og:updated_time" content="2016-12-22T15:55:24.000Z">
+<meta property="og:description" content="一、链接服务器
+ssh -l username 182.188.188.188 (也可以使用ssh username@182.188.188.188)
+linux常用命令
+二、sftp链接
+sftp username@182.188.188.188
+sftp常用命令：pwdPrint working directory of remote hostlpwdPrint working directo">
+<meta property="og:updated_time" content="2017-03-13T14:27:19.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="相机权限获取">
-<meta name="twitter:description" content="测试一个项目时，报错“This app has crashed because it attempted to access privacy-sensitive data without a usage description.  The app’s Info.plist must contain an NSCameraUsageDescription key with a string valu">
+<meta name="twitter:title" content="ssh 和 sftp">
+<meta name="twitter:description" content="一、链接服务器
+ssh -l username 182.188.188.188 (也可以使用ssh username@182.188.188.188)
+linux常用命令
+二、sftp链接
+sftp username@182.188.188.188
+sftp常用命令：pwdPrint working directory of remote hostlpwdPrint working directo">
 
 
 
@@ -114,10 +129,10 @@
 
 
 
-  <link rel="canonical" href="https://xiaoxindihua.github.io/2016/12/22/相机权限获取/"/>
+  <link rel="canonical" href="https://xiaoxindihua.github.io/2017/03/13/ssh 和 sftp/"/>
 
 
-  <title> 相机权限获取 | LuoXin </title>
+  <title> ssh 和 sftp | LuoXin </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -247,7 +262,7 @@
             
             
               
-                相机权限获取
+                ssh 和 sftp
               
             
           </h1>
@@ -259,8 +274,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-22T23:47:45+08:00" content="2016-12-22">
-              2016-12-22
+            <time itemprop="dateCreated" datetime="2017-03-13T00:00:00+08:00" content="2017-03-13">
+              2017-03-13
             </time>
           </span>
 
@@ -287,7 +302,12 @@
       
 
       
-        <p>测试一个项目时，报错“This app has crashed because it attempted to access privacy-sensitive data without a usage description.  The app’s Info.plist must contain an NSCameraUsageDescription key with a string value explaining to the user how the app uses this data.”<br>根据提示，需要获取相机的使用描述。具体解决办法为在Info.plist文件中添加相关key，涉及到的相关权限获取有如下几个部分：相机、相册、联系人、麦克风。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;key&gt;NSCameraUsageDescription&lt;/key&gt;    </div><div class="line">&lt;string&gt;描述信息（选填）&lt;/string&gt;</div><div class="line"></div><div class="line">&lt;key&gt;NSPhotoLibraryUsageDescription&lt;/key&gt;</div><div class="line">&lt;string&gt;描述信息（选填）&lt;/string&gt;</div><div class="line"></div><div class="line">&lt;key&gt;NSContactsUsageDescription&lt;/key&gt;    </div><div class="line">&lt;string&gt;描述信息（选填）&lt;/string&gt;</div><div class="line"></div><div class="line">&lt;key&gt;NSMicrophoneUsageDescription&lt;/key&gt;    </div><div class="line">&lt;string&gt;描述信息（选填）&lt;/string&gt;</div></pre></td></tr></table></figure></p>
+        <p>一、链接服务器</p>
+<p>ssh -l username 182.188.188.188 (也可以使用ssh username@182.188.188.188)</p>
+<p><a href="http://www.ithome.com/html/it/251453.htm" target="_blank" rel="external">linux常用命令</a></p>
+<p>二、sftp链接</p>
+<p>sftp username@182.188.188.188</p>
+<p>sftp常用命令：<br>pwd<br>Print working directory of remote host<br>lpwd<br>Print working directory of local client<br>cd<br>Change directory on the remote host<br>lcd<br>Change directory on the local client<br>ls<br>List director on the remote host<br>lls<br>List directory on the local client<br>mkdir<br>Make directory on remote host<br>lmkdir<br>Make directory on local client<br>get<br>Receive file from remote host to local client<br>put<br>Send file from local client to remote host<br>help<br>Display help text</p>
 
       
     </div>
@@ -312,7 +332,7 @@
           
             <a href="/tags/技术/" rel="tag">#技术</a>
           
-            <a href="/tags/iOS/" rel="tag">#iOS</a>
+            <a href="/tags/Linux/" rel="tag">#Linux</a>
           
         </div>
       
@@ -321,16 +341,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/21/项目进度条展示优化/" rel="next" title="项目进度条展示优化">
-                <i class="fa fa-chevron-left"></i> 项目进度条展示优化
+              <a href="/2017/02/04/ssh-connect-to-host-github-com-port-22-Operation-timed-out/" rel="next" title="ssh: connect to host github.com port 22: Operation timed out">
+                <i class="fa fa-chevron-left"></i> ssh: connect to host github.com port 22: Operation timed out
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/01/06/cx-Oracle安装/" rel="prev" title="cx_Oracle安装注意事项">
-                cx_Oracle安装注意事项 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/03/13/iOS保存录制视频并上传服务器/" rel="prev" title="iOS保存录制视频并上传服务器">
+                iOS保存录制视频并上传服务器 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
