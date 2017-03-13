@@ -84,16 +84,16 @@
 
 
 
-<meta name="description" content="测试一个项目时，报错“This app has crashed because it attempted to access privacy-sensitive data without a usage description.  The app’s Info.plist must contain an NSCameraUsageDescription key with a string valu">
+<meta name="description" content="一、自定义log，代码放入AppDelegate中12345func LXLog&amp;lt;T&amp;gt;(message: T,fileName:String = #file, methodName:String = #function, lineNumber:Int = #line)&amp;#123;    #if DEBUG        print(&amp;quot;\((fileName as NSStri">
 <meta property="og:type" content="article">
-<meta property="og:title" content="相机权限获取">
-<meta property="og:url" content="https://xiaoxindihua.github.io/2016/12/22/相机权限获取/index.html">
+<meta property="og:title" content="自定义log">
+<meta property="og:url" content="https://xiaoxindihua.github.io/2016/11/07/33333自定义log/index.html">
 <meta property="og:site_name" content="LuoXin">
-<meta property="og:description" content="测试一个项目时，报错“This app has crashed because it attempted to access privacy-sensitive data without a usage description.  The app’s Info.plist must contain an NSCameraUsageDescription key with a string valu">
-<meta property="og:updated_time" content="2016-12-22T15:55:24.000Z">
+<meta property="og:description" content="一、自定义log，代码放入AppDelegate中12345func LXLog&amp;lt;T&amp;gt;(message: T,fileName:String = #file, methodName:String = #function, lineNumber:Int = #line)&amp;#123;    #if DEBUG        print(&amp;quot;\((fileName as NSStri">
+<meta property="og:updated_time" content="2016-11-07T05:48:58.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="相机权限获取">
-<meta name="twitter:description" content="测试一个项目时，报错“This app has crashed because it attempted to access privacy-sensitive data without a usage description.  The app’s Info.plist must contain an NSCameraUsageDescription key with a string valu">
+<meta name="twitter:title" content="自定义log">
+<meta name="twitter:description" content="一、自定义log，代码放入AppDelegate中12345func LXLog&amp;lt;T&amp;gt;(message: T,fileName:String = #file, methodName:String = #function, lineNumber:Int = #line)&amp;#123;    #if DEBUG        print(&amp;quot;\((fileName as NSStri">
 
 
 
@@ -114,10 +114,10 @@
 
 
 
-  <link rel="canonical" href="https://xiaoxindihua.github.io/2016/12/22/相机权限获取/"/>
+  <link rel="canonical" href="https://xiaoxindihua.github.io/2016/11/07/33333自定义log/"/>
 
 
-  <title> 相机权限获取 | LuoXin </title>
+  <title> 自定义log | LuoXin </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -247,7 +247,7 @@
             
             
               
-                相机权限获取
+                自定义log
               
             
           </h1>
@@ -259,8 +259,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-22T23:47:45+08:00" content="2016-12-22">
-              2016-12-22
+            <time itemprop="dateCreated" datetime="2016-11-07T00:00:00+08:00" content="2016-11-07">
+              2016-11-07
             </time>
           </span>
 
@@ -287,7 +287,9 @@
       
 
       
-        <p>测试一个项目时，报错“This app has crashed because it attempted to access privacy-sensitive data without a usage description.  The app’s Info.plist must contain an NSCameraUsageDescription key with a string value explaining to the user how the app uses this data.”<br>根据提示，需要获取相机的使用描述。具体解决办法为在Info.plist文件中添加相关key，涉及到的相关权限获取有如下几个部分：相机、相册、联系人、麦克风。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;key&gt;NSCameraUsageDescription&lt;/key&gt;    </div><div class="line">&lt;string&gt;描述信息（选填）&lt;/string&gt;</div><div class="line"></div><div class="line">&lt;key&gt;NSPhotoLibraryUsageDescription&lt;/key&gt;</div><div class="line">&lt;string&gt;描述信息（选填）&lt;/string&gt;</div><div class="line"></div><div class="line">&lt;key&gt;NSContactsUsageDescription&lt;/key&gt;    </div><div class="line">&lt;string&gt;描述信息（选填）&lt;/string&gt;</div><div class="line"></div><div class="line">&lt;key&gt;NSMicrophoneUsageDescription&lt;/key&gt;    </div><div class="line">&lt;string&gt;描述信息（选填）&lt;/string&gt;</div></pre></td></tr></table></figure></p>
+        <p>一、自定义log，代码放入AppDelegate中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">func LXLog&lt;T&gt;(message: T,fileName:String = #file, methodName:String = #function, lineNumber:Int = #line)&#123;</div><div class="line">    #if DEBUG</div><div class="line">        print(&quot;\((fileName as NSString).pathComponents.last!).\(methodName)[\(lineNumber)]:\(message)&quot;)</div><div class="line">    #endif</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>二、Xcode8.0去除控制台多余打印信息</p>
+<p>选择Product-&gt;Scheme-&gt;Edit Scheme-&gt;Run-&gt;Environment Variables 下添加 键：0S_ACTIVITY_MODE，值：disable</p>
 
       
     </div>
@@ -321,16 +323,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/21/项目进度条展示优化/" rel="next" title="项目进度条展示优化">
-                <i class="fa fa-chevron-left"></i> 项目进度条展示优化
+              <a href="/2016/11/05/hexo常用命令/" rel="next" title="hexo常用命令">
+                <i class="fa fa-chevron-left"></i> hexo常用命令
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/01/06/cx-Oracle安装/" rel="prev" title="cx_Oracle安装注意事项">
-                cx_Oracle安装注意事项 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/11/07/自定义log/" rel="prev" title="自定义log">
+                自定义log <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
