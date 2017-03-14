@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="技术,iOS," />
+  <meta name="keywords" content="iOS," />
 
 
 
@@ -84,16 +84,22 @@
 
 
 
-<meta name="description" content="今天进行代码优化，其中一个功能是展示项目的进度。通过后台返回数据，实现进度条展示。之前的代码是通过叠加两个view来实现，白色view为底色、蓝色view覆盖在白色view上并通过后台返回数据动态计算蓝色view的宽，但是由于没有进行约束，导致view会超出白色view范围。如果通过添加约束来实现会相对麻烦，最终通过UIProgressView来实现，即可以减少控件，省去很多布局和约束麻烦，又可以">
+<meta name="description" content="一、设置工程中默认的ViewController为导航控制器，并加载Main.storyboard
+1.在AppDelegate.m中设置
+123456789101112131415- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions">
 <meta property="og:type" content="article">
-<meta property="og:title" content="项目进度条展示优化">
-<meta property="og:url" content="https://xiaoxindihua.github.io/2016/12/21/项目进度条展示优化/index.html">
+<meta property="og:title" content="设置导航控制器">
+<meta property="og:url" content="https://xiaoxindihua.github.io/2017/03/14/设置导航控制器/index.html">
 <meta property="og:site_name" content="LuoXin">
-<meta property="og:description" content="今天进行代码优化，其中一个功能是展示项目的进度。通过后台返回数据，实现进度条展示。之前的代码是通过叠加两个view来实现，白色view为底色、蓝色view覆盖在白色view上并通过后台返回数据动态计算蓝色view的宽，但是由于没有进行约束，导致view会超出白色view范围。如果通过添加约束来实现会相对麻烦，最终通过UIProgressView来实现，即可以减少控件，省去很多布局和约束麻烦，又可以">
-<meta property="og:updated_time" content="2016-12-21T12:05:28.000Z">
+<meta property="og:description" content="一、设置工程中默认的ViewController为导航控制器，并加载Main.storyboard
+1.在AppDelegate.m中设置
+123456789101112131415- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions">
+<meta property="og:updated_time" content="2017-03-14T04:32:58.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="项目进度条展示优化">
-<meta name="twitter:description" content="今天进行代码优化，其中一个功能是展示项目的进度。通过后台返回数据，实现进度条展示。之前的代码是通过叠加两个view来实现，白色view为底色、蓝色view覆盖在白色view上并通过后台返回数据动态计算蓝色view的宽，但是由于没有进行约束，导致view会超出白色view范围。如果通过添加约束来实现会相对麻烦，最终通过UIProgressView来实现，即可以减少控件，省去很多布局和约束麻烦，又可以">
+<meta name="twitter:title" content="设置导航控制器">
+<meta name="twitter:description" content="一、设置工程中默认的ViewController为导航控制器，并加载Main.storyboard
+1.在AppDelegate.m中设置
+123456789101112131415- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions">
 
 
 
@@ -114,10 +120,10 @@
 
 
 
-  <link rel="canonical" href="https://xiaoxindihua.github.io/2016/12/21/项目进度条展示优化/"/>
+  <link rel="canonical" href="https://xiaoxindihua.github.io/2017/03/14/设置导航控制器/"/>
 
 
-  <title> 项目进度条展示优化 | LuoXin </title>
+  <title> 设置导航控制器 | LuoXin </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -247,7 +253,7 @@
             
             
               
-                项目进度条展示优化
+                设置导航控制器
               
             
           </h1>
@@ -259,8 +265,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-21T19:49:19+08:00" content="2016-12-21">
-              2016-12-21
+            <time itemprop="dateCreated" datetime="2017-03-14T00:00:00+08:00" content="2017-03-14">
+              2017-03-14
             </time>
           </span>
 
@@ -287,8 +293,13 @@
       
 
       
-        <p>今天进行代码优化，其中一个功能是展示项目的进度。通过后台返回数据，实现进度条展示。<br>之前的代码是通过叠加两个view来实现，白色view为底色、蓝色view覆盖在白色view上并通过后台返回数据动态计算蓝色view的宽，但是由于没有进行约束，导致view会超出白色view范围。<br>如果通过添加约束来实现会相对麻烦，最终通过UIProgressView来实现，即可以减少控件，省去很多布局和约束麻烦，又可以减少代码量。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">projectProgressView.transform = CGAffineTransformMakeScale(1.0f,5.0f);</div></pre></td></tr></table></figure></p>
-<p>通过更改progressView的transform属性，可以缩放progressView大小。</p>
+        <p>一、设置工程中默认的ViewController为导航控制器，并加载Main.storyboard</p>
+<p>1.在AppDelegate.m中设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions &#123;</div><div class="line">    </div><div class="line">    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];</div><div class="line">    </div><div class="line">    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@&quot;Main&quot; bundle:nil];</div><div class="line">    </div><div class="line">    ViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:@&quot;view&quot;];</div><div class="line">    </div><div class="line">    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:vc];</div><div class="line">    </div><div class="line">    [self.window makeKeyAndVisible];</div><div class="line">    </div><div class="line">      </div><div class="line">    return YES;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>2.ViewController中弹出控制器方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[self.navigationController pushViewController:liveVC animated:YES];</div></pre></td></tr></table></figure>
+<p>3.如果没有将ViewController设置为导航控制器只能使用以下方法弹出控制器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[self presentViewController:liveVC animated:YES completion:nil];</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -311,8 +322,6 @@
       
         <div class="post-tags">
           
-            <a href="/tags/技术/" rel="tag">#技术</a>
-          
             <a href="/tags/iOS/" rel="tag">#iOS</a>
           
         </div>
@@ -322,17 +331,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/15/什么才是真正的刚需/" rel="next" title="什么才是真正的刚需">
-                <i class="fa fa-chevron-left"></i> 什么才是真正的刚需
+              <a href="/2017/03/13/ssh 和 sftp/" rel="next" title="ssh 和 sftp">
+                <i class="fa fa-chevron-left"></i> ssh 和 sftp
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/22/相机权限获取/" rel="prev" title="相机权限获取">
-                相机权限获取 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
