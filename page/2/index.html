@@ -249,8 +249,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/14/设置导航控制器/" itemprop="url">
-                  设置导航控制器
+                <a class="post-title-link" href="/2017/03/14/Mac系统下制作Centos-U盘启动盘/" itemprop="url">
+                  Mac系统下制作Centos U盘启动盘
                 </a>
               
             
@@ -293,13 +293,18 @@
       
         
           
-          一、设置工程中默认的ViewController为导航控制器，并加载Main.storyboard
-1.在AppDelegate.m中设置
-123456789101112131415- (BOOL)application:(UIApplication *)application didFinishL
+          1.格式化U盘
+2.查看U盘
+$ diskutil list  
+此处U盘为disk2
+3.卸载U盘
+$diskutil unmountDisk /dev/disk2
+4.拷贝文件
+dd if=/Users/luoxin/Downloads/CentOS-7-x86_64-DVD-1611.iso 
           ...
 
           <div class="post-more-link text-center">
-            <a class="btn" href="/2017/03/14/设置导航控制器/#more" rel="contents">
+            <a class="btn" href="/2017/03/14/Mac系统下制作Centos-U盘启动盘/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
