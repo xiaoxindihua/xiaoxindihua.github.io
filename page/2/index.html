@@ -249,8 +249,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/14/设置导航控制器/" itemprop="url">
-                  设置导航控制器
+                <a class="post-title-link" href="/2017/03/14/Mac系统下制作Centos-U盘启动盘/" itemprop="url">
+                  Mac系统下制作Centos U盘启动盘
                 </a>
               
             
@@ -293,13 +293,18 @@
       
         
           
-          一、设置工程中默认的ViewController为导航控制器，并加载Main.storyboard
-1.在AppDelegate.m中设置
-123456789101112131415- (BOOL)application:(UIApplication *)application didFinishL
+          1.格式化U盘
+2.查看U盘
+$ diskutil list  
+此处U盘为disk2
+3.卸载U盘
+$diskutil unmountDisk /dev/disk2
+4.拷贝文件
+dd if=/Users/luoxin/Downloads/CentOS-7-x86_64-DVD-1611.iso 
           ...
 
           <div class="post-more-link text-center">
-            <a class="btn" href="/2017/03/14/设置导航控制器/#more" rel="contents">
+            <a class="btn" href="/2017/03/14/Mac系统下制作Centos-U盘启动盘/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -555,8 +560,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/13/iOS保存录制视频并上传服务器/" itemprop="url">
-                  iOS保存录制视频并上传服务器
+                <a class="post-title-link" href="/2017/03/14/设置导航控制器/" itemprop="url">
+                  设置导航控制器
                 </a>
               
             
@@ -569,8 +574,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-03-13T00:00:00+08:00" content="2017-03-13">
-              2017-03-13
+            <time itemprop="dateCreated" datetime="2017-03-14T00:00:00+08:00" content="2017-03-14">
+              2017-03-14
             </time>
           </span>
 
@@ -599,12 +604,13 @@
       
         
           
-          一、获取视频输入设备
-1234567891011//视频输入设备-(AVCaptureDeviceInput *)getVideoInput&#123;    NSError *error = nil;        AVCaptureDevice *device = [AVCaptureDevic
+          一、设置工程中默认的ViewController为导航控制器，并加载Main.storyboard
+1.在AppDelegate.m中设置
+123456789101112131415- (BOOL)application:(UIApplication *)application didFinishL
           ...
 
           <div class="post-more-link text-center">
-            <a class="btn" href="/2017/03/13/iOS保存录制视频并上传服务器/#more" rel="contents">
+            <a class="btn" href="/2017/03/14/设置导航控制器/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -709,6 +715,106 @@ sftp常用命令：pwdPrint working
 
           <div class="post-more-link text-center">
             <a class="btn" href="/2017/03/13/ssh 和 sftp/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/13/iOS保存录制视频并上传服务器/" itemprop="url">
+                  iOS保存录制视频并上传服务器
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-03-13T00:00:00+08:00" content="2017-03-13">
+              2017-03-13
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          一、获取视频输入设备
+1234567891011//视频输入设备-(AVCaptureDeviceInput *)getVideoInput&#123;    NSError *error = nil;        AVCaptureDevice *device = [AVCaptureDevic
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/03/13/iOS保存录制视频并上传服务器/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1137,105 +1243,6 @@ sftp常用命令：pwdPrint working
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/21/项目进度条展示优化/" itemprop="url">
-                  项目进度条展示优化
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-21T19:49:19+08:00" content="2016-12-21">
-              2016-12-21
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          今天进行代码优化，其中一个功能是展示项目的进度。通过后台返回数据，实现进度条展示。之前的代码是通过叠加两个view来实现，白色view为底色、蓝色view覆盖在白色view上并通过后台返回数据动态计算蓝色view的宽，但是由于没有进行约束，导致view会超出白色view范围。如果通过添加约束来实现会
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/21/项目进度条展示优化/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1281,7 +1288,7 @@ sftp常用命令：pwdPrint working
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">28</span>
+              <span class="site-state-item-count">29</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1291,7 +1298,7 @@ sftp常用命令：pwdPrint working
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-count">19</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

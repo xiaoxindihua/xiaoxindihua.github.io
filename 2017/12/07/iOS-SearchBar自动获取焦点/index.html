@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="滑雪,单板," />
+  <meta name="keywords" content="iOS,SearchBar," />
 
 
 
@@ -84,22 +84,25 @@
 
 
 
-<meta name="description" content="这个周四一帮小伙伴儿就浩浩荡荡的奔赴崇礼滑雪(🏂)去了，开始了这个雪季的首滑，心里痒痒的，但是没办法同行。没能同行却总是担心小伙伴儿的安全，毕竟滑雪还是有一定风险的，因此想到写一篇文章，为将要参与这项运动的朋友提供一点儿参考，同时也为了提醒自己和小伙伴儿们时刻不忘安全。
-这篇文章主要针对单板，双板了解不多，但是基本内容相差不大。
-首先想要强调的是装备，工欲善其事必先利其器，装备的重要性不言而喻。">
+<meta name="description" content="大部分使用SearchBar的环境下，都需要点击searchbar，跳转到检索页面，直接将焦点定位到SearchBar的输入框，节省用户一个点击操作，提升用户体验。
+为实现该目的，需要进行两步操作：
+1.viewDidAppear中设置SearchBarController.isActive = true
+123  override func viewDidAppear(_ animated: B">
 <meta property="og:type" content="article">
-<meta property="og:title" content="滑雪的正确打开方式">
-<meta property="og:url" content="https://xiaoxindihua.github.io/2016/11/12/滑雪的正确打开方式/index.html">
+<meta property="og:title" content="iOS SearchBar自动获取焦点">
+<meta property="og:url" content="https://xiaoxindihua.github.io/2017/12/07/iOS-SearchBar自动获取焦点/index.html">
 <meta property="og:site_name" content="LuoXin">
-<meta property="og:description" content="这个周四一帮小伙伴儿就浩浩荡荡的奔赴崇礼滑雪(🏂)去了，开始了这个雪季的首滑，心里痒痒的，但是没办法同行。没能同行却总是担心小伙伴儿的安全，毕竟滑雪还是有一定风险的，因此想到写一篇文章，为将要参与这项运动的朋友提供一点儿参考，同时也为了提醒自己和小伙伴儿们时刻不忘安全。
-这篇文章主要针对单板，双板了解不多，但是基本内容相差不大。
-首先想要强调的是装备，工欲善其事必先利其器，装备的重要性不言而喻。">
-<meta property="og:updated_time" content="2016-11-12T10:15:31.000Z">
+<meta property="og:description" content="大部分使用SearchBar的环境下，都需要点击searchbar，跳转到检索页面，直接将焦点定位到SearchBar的输入框，节省用户一个点击操作，提升用户体验。
+为实现该目的，需要进行两步操作：
+1.viewDidAppear中设置SearchBarController.isActive = true
+123  override func viewDidAppear(_ animated: B">
+<meta property="og:updated_time" content="2017-12-07T09:45:19.645Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="滑雪的正确打开方式">
-<meta name="twitter:description" content="这个周四一帮小伙伴儿就浩浩荡荡的奔赴崇礼滑雪(🏂)去了，开始了这个雪季的首滑，心里痒痒的，但是没办法同行。没能同行却总是担心小伙伴儿的安全，毕竟滑雪还是有一定风险的，因此想到写一篇文章，为将要参与这项运动的朋友提供一点儿参考，同时也为了提醒自己和小伙伴儿们时刻不忘安全。
-这篇文章主要针对单板，双板了解不多，但是基本内容相差不大。
-首先想要强调的是装备，工欲善其事必先利其器，装备的重要性不言而喻。">
+<meta name="twitter:title" content="iOS SearchBar自动获取焦点">
+<meta name="twitter:description" content="大部分使用SearchBar的环境下，都需要点击searchbar，跳转到检索页面，直接将焦点定位到SearchBar的输入框，节省用户一个点击操作，提升用户体验。
+为实现该目的，需要进行两步操作：
+1.viewDidAppear中设置SearchBarController.isActive = true
+123  override func viewDidAppear(_ animated: B">
 
 
 
@@ -120,10 +123,10 @@
 
 
 
-  <link rel="canonical" href="https://xiaoxindihua.github.io/2016/11/12/滑雪的正确打开方式/"/>
+  <link rel="canonical" href="https://xiaoxindihua.github.io/2017/12/07/iOS-SearchBar自动获取焦点/"/>
 
 
-  <title> 滑雪的正确打开方式 | LuoXin </title>
+  <title> iOS SearchBar自动获取焦点 | LuoXin </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -253,7 +256,7 @@
             
             
               
-                滑雪的正确打开方式
+                iOS SearchBar自动获取焦点
               
             
           </h1>
@@ -265,8 +268,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-12T17:33:15+08:00" content="2016-11-12">
-              2016-11-12
+            <time itemprop="dateCreated" datetime="2017-12-07T17:34:20+08:00" content="2017-12-07">
+              2017-12-07
             </time>
           </span>
 
@@ -293,12 +296,12 @@
       
 
       
-        <p>这个周四一帮小伙伴儿就浩浩荡荡的奔赴崇礼滑雪(🏂)去了，开始了这个雪季的首滑，心里痒痒的，但是没办法同行。没能同行却总是担心小伙伴儿的安全，毕竟滑雪还是有一定风险的，因此想到写一篇文章，为将要参与这项运动的朋友提供一点儿参考，同时也为了提醒自己和小伙伴儿们时刻不忘安全。</p>
-<p>这篇文章主要针对单板，双板了解不多，但是基本内容相差不大。</p>
-<p>首先想要强调的是装备，工欲善其事必先利其器，装备的重要性不言而喻。但是有些刚刚开始接触滑雪的朋友，可能觉得这些装备更多的作用是炫酷，尤其是单板，板子弄的花里胡哨，衣服穿的花里胡哨，做起动作来花里胡哨。其实不然，作为新手，合适的装备不一定能够在提高自己水平上起到很大作用，但是在保障自身安全上绝对功不可没。单板新手卡刃时有发生，因此最容易受伤的就是头和手，摔跤时候本能的用手支撑，容易发生骨折；摔的太快，来不及支撑，容易摔头，发生脑震荡，所以一副质量可靠的头盔必不可少。再就是雪镜，运动中很容易出汗，长时间在雪场，强反光对眼睛的伤害很大，某些时候阳光直射也会影响视线，另外就是风雪会让眼睛无法睁开，但是一副雪镜就能很好的解决上述问题。再想强调的就是服装，穿牛仔裤也不是不能滑，但是湿了以后很难干，容易失温，当然这不是在野外环境，问题不是很大，顶多就是少滑一会儿，或者多忍受一会儿。初学滑雪是不是要把这些装备都置办齐全？当然不用，现在的雪场都能够租到，所以我并没有提到板子，雪鞋这些东西，因为都能租到。滑上两次，确定喜欢再买也不迟，但是一定要带上头盔和雪镜，这还真不少装酷，脑震荡一次还挺吓人的。</p>
-<p>其次想要强调的是雪场的一些注意事项。如果滑行中摔倒了，赶快起来继续滑，或者靠边，千万不要在雪道上躺着（当然也别趴着、坐着、蹲着），这样很容易干扰别人，甚至被撞。还有就是要小心别装到别人，跟开车一样，追尾全责，由于板子锋利，撞上很容易划伤，这也是上面提到的一定要戴头盔的另一个原因，如果真的刹不住，一定要大喊，及时提醒前面的人避让。</p>
-<p>最后就是希望能能够保持乐观的心态，雪场上难免会碰到不懂规矩的垃圾人，这种人看见了躲远点儿（可以参考垃圾人定律），如果实在看不惯或者不小心发生了冲突，一定要记得别摘头盔（是吧，小白老师）！</p>
-<p>OK，基本差不多了，去high吧！</p>
+        <p>大部分使用SearchBar的环境下，都需要点击searchbar，跳转到检索页面，直接将焦点定位到SearchBar的输入框，节省用户一个点击操作，提升用户体验。</p>
+<p>为实现该目的，需要进行两步操作：</p>
+<p>1.viewDidAppear中设置SearchBarController.isActive = true</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">  <span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">viewDidAppear</span><span class="params">(<span class="number">_</span> animated: Bool)</span></span> &#123;</div><div class="line"><span class="keyword">self</span>.classSearchController.isActive = <span class="literal">true</span></div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<p>2.在didPresentSearchController中设置searchBar，成为firstResponder</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">didPresentSearchController</span><span class="params">(<span class="number">_</span> searchController: UISearchController)</span></span> &#123;</div><div class="line">    <span class="keyword">self</span>.classSearchController.searchBar.becomeFirstResponder()</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -321,9 +324,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/滑雪/" rel="tag">#滑雪</a>
+            <a href="/tags/iOS/" rel="tag">#iOS</a>
           
-            <a href="/tags/单板/" rel="tag">#单板</a>
+            <a href="/tags/SearchBar/" rel="tag">#SearchBar</a>
           
         </div>
       
@@ -332,17 +335,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/11/12/花钱约见专家到底值不值-在行初体验/" rel="next" title="花钱约见专家到底值不值-在行初体验">
-                <i class="fa fa-chevron-left"></i> 花钱约见专家到底值不值-在行初体验
+              <a href="/2017/07/03/使用coremltools转换模型/" rel="next" title="使用coremltools转换模型">
+                <i class="fa fa-chevron-left"></i> 使用coremltools转换模型
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/15/什么才是真正的刚需/" rel="prev" title="什么才是真正的刚需">
-                什么才是真正的刚需 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
