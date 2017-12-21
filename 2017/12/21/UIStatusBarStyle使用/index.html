@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="opencv," />
+  <meta name="keywords" content="UIStatusBarStyle,swift," />
 
 
 
@@ -84,25 +84,31 @@
 
 
 
-<meta name="description" content="问题描述：macOS系统，使用brew install opencv后，通过python import cv2，提示”ImportError: No module named cv2”。
-解决办法：解决办法很简单，其实安装完opencv时就有提示，只是自己没注意到
-运行以下两行代码，问题解决
-12mkdir -p /Users/luoxin/Library/Python/2.7/lib/pytho">
+<meta name="description" content="项目需求：
+1.UIStatusBarStyle全局白色
+2.部分控制器中需要将UIStatusBarStyle隐藏
+问题：
+1.UIStatusBarStyle全局白色可以通过在Info.plist 和AppDelegate中设置实现
+首先，在Info.plist中设置View controller-based status bar appearance 为NO，表示由系统统一控制UIStatu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="macOS解决ImportError:No module named cv2">
-<meta property="og:url" content="https://xiaoxindihua.github.io/2017/05/18/macOS解决ImportError:-No-module-named-cv2/index.html">
+<meta property="og:title" content="UIStatusBarStyle使用">
+<meta property="og:url" content="https://xiaoxindihua.github.io/2017/12/21/UIStatusBarStyle使用/index.html">
 <meta property="og:site_name" content="LuoXin">
-<meta property="og:description" content="问题描述：macOS系统，使用brew install opencv后，通过python import cv2，提示”ImportError: No module named cv2”。
-解决办法：解决办法很简单，其实安装完opencv时就有提示，只是自己没注意到
-运行以下两行代码，问题解决
-12mkdir -p /Users/luoxin/Library/Python/2.7/lib/pytho">
-<meta property="og:updated_time" content="2017-05-18T04:06:12.000Z">
+<meta property="og:description" content="项目需求：
+1.UIStatusBarStyle全局白色
+2.部分控制器中需要将UIStatusBarStyle隐藏
+问题：
+1.UIStatusBarStyle全局白色可以通过在Info.plist 和AppDelegate中设置实现
+首先，在Info.plist中设置View controller-based status bar appearance 为NO，表示由系统统一控制UIStatu">
+<meta property="og:updated_time" content="2017-12-21T11:11:17.019Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="macOS解决ImportError:No module named cv2">
-<meta name="twitter:description" content="问题描述：macOS系统，使用brew install opencv后，通过python import cv2，提示”ImportError: No module named cv2”。
-解决办法：解决办法很简单，其实安装完opencv时就有提示，只是自己没注意到
-运行以下两行代码，问题解决
-12mkdir -p /Users/luoxin/Library/Python/2.7/lib/pytho">
+<meta name="twitter:title" content="UIStatusBarStyle使用">
+<meta name="twitter:description" content="项目需求：
+1.UIStatusBarStyle全局白色
+2.部分控制器中需要将UIStatusBarStyle隐藏
+问题：
+1.UIStatusBarStyle全局白色可以通过在Info.plist 和AppDelegate中设置实现
+首先，在Info.plist中设置View controller-based status bar appearance 为NO，表示由系统统一控制UIStatu">
 
 
 
@@ -123,10 +129,10 @@
 
 
 
-  <link rel="canonical" href="https://xiaoxindihua.github.io/2017/05/18/macOS解决ImportError:-No-module-named-cv2/"/>
+  <link rel="canonical" href="https://xiaoxindihua.github.io/2017/12/21/UIStatusBarStyle使用/"/>
 
 
-  <title> macOS解决ImportError:No module named cv2 | LuoXin </title>
+  <title> UIStatusBarStyle使用 | LuoXin </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -256,7 +262,7 @@
             
             
               
-                macOS解决ImportError:No module named cv2
+                UIStatusBarStyle使用
               
             
           </h1>
@@ -268,8 +274,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-05-18T00:00:00+08:00" content="2017-05-18">
-              2017-05-18
+            <time itemprop="dateCreated" datetime="2017-12-21T18:50:37+08:00" content="2017-12-21">
+              2017-12-21
             </time>
           </span>
 
@@ -296,12 +302,25 @@
       
 
       
-        <h3 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h3><p>macOS系统，使用brew install opencv后，通过python import cv2，提示”ImportError: No module named cv2”。</p>
-<h3 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h3><p>解决办法很简单，其实安装完opencv时就有提示，只是自己没注意到</p>
-<p>运行以下两行代码，问题解决</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkdir -p /Users/luoxin/Library/Python/2.7/lib/python/site-packages</div><div class="line">echo &apos;import site; site.addsitedir(&quot;/usr/local/lib/python2.7/site-packages&quot;)&apos; &gt;&gt; /Users/luoxin/Library/Python/2.7/lib/python/site-packages/homebrew.pth</div></pre></td></tr></table></figure>
-<p>安装opencv时，整体显示内容如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">brew install opencv</div><div class="line">==&gt; Installing opencv from homebrew/science</div><div class="line">==&gt; Downloading https://homebrew.bintray.com/bottles-science/opencv-2.4.13.2.sierra.bottle.1.tar.gz</div><div class="line">######################################################################## 100.0%</div><div class="line">==&gt; Pouring opencv-2.4.13.2.sierra.bottle.1.tar.gz</div><div class="line">==&gt; Caveats</div><div class="line">Python modules have been installed and Homebrew&apos;s site-packages is not</div><div class="line">in your Python sys.path, so you will not be able to import the modules</div><div class="line">this formula installed. If you plan to develop with these modules,</div><div class="line">please run:</div><div class="line">  mkdir -p /Users/luoxin/Library/Python/2.7/lib/python/site-packages</div><div class="line">  echo &apos;import site; site.addsitedir(&quot;/usr/local/lib/python2.7/site-packages&quot;)&apos; &gt;&gt; /Users/luoxin/Library/Python/2.7/lib/python/site-packages/homebrew.pth</div></pre></td></tr></table></figure>
+        <p>项目需求：</p>
+<p>1.UIStatusBarStyle全局白色</p>
+<p>2.部分控制器中需要将UIStatusBarStyle隐藏</p>
+<p>问题：</p>
+<p>1.UIStatusBarStyle全局白色可以通过在Info.plist 和AppDelegate中设置实现</p>
+<p>首先，在Info.plist中设置View controller-based status bar appearance 为NO，表示由系统统一控制UIStatusBar样式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">View controller-based status bar appearance -&gt; NO</div></pre></td></tr></table></figure>
+<p>其次，要在AppDelegate中设置</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="type">UIApplication</span>.shared.statusBarStyle = .lightContent</div></pre></td></tr></table></figure>
+<p>自此，UIStatusBar被系统统一设置为白色。</p>
+<p>但是由于UIStatusBar被系统统一接管，无法在单独的控制器中设置UIStatusBar隐藏</p>
+<p>解决办法：</p>
+<p>1.在Info.plist中设置View controller-based status bar appearance 为YES，表示中控制器中自行设置样式</p>
+<p>2.在控制器中重写preferredStatusBarStyle方法 ，并调用 setNeedsStatusBarAppearanceUpdate()方法</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">override</span> <span class="keyword">var</span> preferredStatusBarStyle: <span class="type">UIStatusBarStyle</span>&#123;</div><div class="line">    <span class="keyword">return</span> .lightContent</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">viewWillAppear</span><span class="params">(<span class="number">_</span> animated: Bool)</span></span> &#123;</div><div class="line">    setNeedsStatusBarAppearanceUpdate()</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>3.如果控制器没有使用UINavigationController，就能够设置成功；如果控制器使用了UINavigationController，设置无效，需要将navigationBar.barStyle设置为黑色</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">    <span class="keyword">override</span> <span class="keyword">var</span> preferredStatusBarStyle: <span class="type">UIStatusBarStyle</span>&#123;</div><div class="line">        <span class="keyword">return</span> .lightContent</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">viewWillAppear</span><span class="params">(<span class="number">_</span> animated: Bool)</span></span> &#123;</div><div class="line">+        <span class="keyword">self</span>.navigationController?.navigationBar.barStyle = .black</div><div class="line">        setNeedsStatusBarAppearanceUpdate()</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>4.设置UIStatusBar隐藏</p>
+<p>设置prefersStatusBarHidden = true，并调用setNeedsStatusBarAppearanceUpdate()方法</p>
 
       
     </div>
@@ -324,7 +343,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/opencv/" rel="tag">#opencv</a>
+            <a href="/tags/UIStatusBarStyle/" rel="tag">#UIStatusBarStyle</a>
+          
+            <a href="/tags/swift/" rel="tag">#swift</a>
           
         </div>
       
@@ -333,17 +354,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/17/about_the_new_employee_manual/" rel="next" title="关于新版员工手册的看法">
-                <i class="fa fa-chevron-left"></i> 关于新版员工手册的看法
+              <a href="/2017/12/07/iOS-SearchBar自动获取焦点/" rel="next" title="iOS SearchBar自动获取焦点">
+                <i class="fa fa-chevron-left"></i> iOS SearchBar自动获取焦点
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/03/使用coremltools转换模型/" rel="prev" title="使用coremltools转换模型">
-                使用coremltools转换模型 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -466,7 +483,7 @@ var duoshuoQuery = {short_name:"luoxinin"};
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题描述："><span class="nav-number">1.</span> <span class="nav-text">问题描述：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决办法："><span class="nav-number">2.</span> <span class="nav-text">解决办法：</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
         </section>
