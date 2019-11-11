@@ -1,0 +1,11 @@
+{
+    "applinks":{
+        "apps":[],
+        "details":[
+            {
+                "appID":"in.luoxin.appbuying",
+                "paths":["/prod/*"]
+            }
+        ]
+    }
+}
