@@ -3,12 +3,16 @@
         "apps": [],
         "details": [
             {
-                "appID": "com.BlingHour.appbuy",
+                "appID": "D8J6HMAXJF.in.luoxin.appbuying",
                 "paths": [ "/page/*"]
             },
             {
-                "appID": "com.BlingHour.appbuy",
-                "paths": [ "*" ]
+                "appID": "D8J6HMAXJF.in.luoxin.appbuying",
+                "paths": [ "*" ，"/" ]
+            },
+            {
+                "appID": "C9FFFSJTPJ.com.BlingHour.appbuy",
+                "paths": [ "*" ，"/" ]
             }
         ]
     }
