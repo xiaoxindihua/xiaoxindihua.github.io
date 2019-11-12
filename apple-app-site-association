@@ -3,11 +3,11 @@
         "apps": [],
         "details": [
             {
-                "appID": "in.luoxin.appbuy",
+                "appID": "D8J6HMAXJF.in.luoxin.appbuy",
                 "paths": [ "/page/*"]
             },
             {
-                "appID": "in.luoxin.appbuy",
+                "appID": "D8J6HMAXJF.in.luoxin.appbuy",
                 "paths": [ " *" ，" /" ]
             }
         ]
