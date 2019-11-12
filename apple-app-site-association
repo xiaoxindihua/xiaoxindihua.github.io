@@ -4,6 +4,9 @@
         "details": [{
             "appID": "D8J6HMAXJF.in.luoxin.appbuying",
             "paths": ["*"]
+        },{
+            "appID": "C9FFFSJTPJ.com.BlingHour.appbuy",
+            "paths": ["*"]
         }]
     }
 }
