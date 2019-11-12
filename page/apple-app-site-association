@@ -3,7 +3,7 @@
         "apps":[],
         "details":[
             {
-                "appID":"in.luoxin.appbuying",
+                "appID":"com.BlingHour.appbuy",
                 "paths":["/page/*"]
             }
         ]
