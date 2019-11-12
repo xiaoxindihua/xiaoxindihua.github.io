@@ -1,10 +1,14 @@
 {
-    "applinks":{
-        "apps":[],
-        "details":[
+    "applinks": {
+        "apps": [],
+        "details": [
             {
-                "appID":"in.luoxin.appbuying",
-                "paths":["/page/*"]
+                "appID": "com.BlingHour.appbuy",
+                "paths": [ "/page/*"]
+            },
+            {
+                "appID": "com.BlingHour.appbuy",
+                "paths": [ "*" ]
             }
         ]
     }
