@@ -1,0 +1,614 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="iOS,技术," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="一、获取视频输入设备
+1234567891011//视频输入设备-(AVCaptureDeviceInput *)getVideoInput&amp;#123;    NSError *error = nil;        AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithDeviceType:AVCaptureDeviceTypeB">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS保存录制视频并上传服务器">
+<meta property="og:url" content="https://xiaoxindihua.github.io/2017/03/13/iOS保存录制视频并上传服务器/index.html">
+<meta property="og:site_name" content="LuoXin">
+<meta property="og:description" content="一、获取视频输入设备
+1234567891011//视频输入设备-(AVCaptureDeviceInput *)getVideoInput&amp;#123;    NSError *error = nil;        AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithDeviceType:AVCaptureDeviceTypeB">
+<meta property="og:updated_time" content="2017-03-13T15:00:26.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iOS保存录制视频并上传服务器">
+<meta name="twitter:description" content="一、获取视频输入设备
+1234567891011//视频输入设备-(AVCaptureDeviceInput *)getVideoInput&amp;#123;    NSError *error = nil;        AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithDeviceType:AVCaptureDeviceTypeB">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="https://xiaoxindihua.github.io/2017/03/13/iOS保存录制视频并上传服务器/"/>
+
+
+  <title> iOS保存录制视频并上传服务器 | LuoXin </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">LuoXin</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                iOS保存录制视频并上传服务器
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-03-13T00:00:00+08:00" content="2017-03-13">
+              2017-03-13
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>一、获取视频输入设备</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">//视频输入设备</div><div class="line">-(AVCaptureDeviceInput *)getVideoInput</div><div class="line">&#123;</div><div class="line">    NSError *error = nil;</div><div class="line">    </div><div class="line">    AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithDeviceType:AVCaptureDeviceTypeBuiltInWideAngleCamera mediaType:AVMediaTypeVideo position:AVCaptureDevicePositionFront];</div><div class="line"></div><div class="line">    AVCaptureDeviceInput *input = [AVCaptureDeviceInput deviceInputWithDevice:device error:&amp;error];</div><div class="line">    </div><div class="line">    return input;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>二、配置输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">//视频输出</div><div class="line">-(AVCaptureVideoDataOutput *)getVideoOutputWithQueue:(dispatch_queue_t)queue</div><div class="line">&#123;</div><div class="line">    </div><div class="line">    if(_videoOutput != nil)&#123;</div><div class="line">        </div><div class="line">        return _videoOutput;</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    _videoOutput = [[AVCaptureVideoDataOutput alloc] init];</div><div class="line">    </div><div class="line">    _videoOutput.alwaysDiscardsLateVideoFrames = YES;</div><div class="line">    </div><div class="line">    NSDictionary *settings = [[NSDictionary alloc] initWithObjectsAndKeys:</div><div class="line">                              [NSNumber numberWithInt:240], (id)kCVPixelBufferWidthKey,</div><div class="line">                              [NSNumber numberWithInt:320], (id)kCVPixelBufferHeightKey,</div><div class="line">                              [NSNumber numberWithInt:kCVPixelFormatType_32BGRA],(id)kCVPixelBufferPixelFormatTypeKey,</div><div class="line">                              nil];</div><div class="line">    </div><div class="line">    _videoOutput.videoSettings = settings;</div><div class="line"></div><div class="line">    [_videoOutput setSampleBufferDelegate:self queue:queue];</div><div class="line"></div><div class="line">    return _videoOutput;</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>三、初始化AVCaptureSession</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">-(void)setupSession&#123;</div><div class="line">    </div><div class="line">    //初始化session</div><div class="line">    _captureSession = [[AVCaptureSession alloc]init];</div><div class="line">    </div><div class="line">    //设置输入输出格式(也会影响预览效果)</div><div class="line">    [_captureSession setSessionPreset:AVCaptureSessionPresetMedium];</div><div class="line">    </div><div class="line">    AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithDeviceType:AVCaptureDeviceTypeBuiltInWideAngleCamera mediaType:AVMediaTypeVideo position:AVCaptureDevicePositionFront];</div><div class="line">    </div><div class="line">    AVCaptureDeviceInput *deviceInput = [AVCaptureDeviceInput deviceInputWithDevice:device error:nil];</div><div class="line">    </div><div class="line">    [_captureSession addInput:deviceInput];</div><div class="line"></div><div class="line">    //传入一个线程</div><div class="line">    dispatch_queue_t videoQueue = dispatch_queue_create(&quot;theQueue&quot;, NULL);</div><div class="line">    </div><div class="line">    [_captureSession addOutput:[self getVideoOutputWithQueue:videoQueue]];</div><div class="line">    </div><div class="line">    [_captureSession startRunning];</div><div class="line"></div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>四、设置预览层</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">-(void)setupPreviewLayer&#123;</div><div class="line">    </div><div class="line">    _previewLayer = [[AVCaptureVideoPreviewLayer alloc]initWithSession:_captureSession];</div><div class="line">    </div><div class="line">    _previewLayer.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);</div><div class="line">    _previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;</div><div class="line">    </div><div class="line">    [self.view.layer addSublayer:_previewLayer];</div><div class="line">    </div><div class="line">    self.view.layer.masksToBounds = YES;</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>五、设置AVAssetWriter</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line">-(AVAssetWriter *)setMediaWriter</div><div class="line">&#123;</div><div class="line">        NSString *videoString = [NSString stringWithFormat:@&quot;xxx.mov&quot;];</div><div class="line">        NSLog(@&quot;%@&quot;,videoString);</div><div class="line">    </div><div class="line">    NSString *path = [NSTemporaryDirectory() stringByAppendingString:videoString];</div><div class="line">    NSURL *url = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:videoString]];</div><div class="line">    //首先判断当前文件的路径是否存在，如果存在则删除文件</div><div class="line">    if ([[NSFileManager defaultManager] fileExistsAtPath:path]) &#123;</div><div class="line">        NSLog(@&quot;already exists&quot;);</div><div class="line">        NSError *error;</div><div class="line">        if ([[NSFileManager defaultManager] removeItemAtPath:path error:&amp;error] == NO) &#123;</div><div class="line">            NSLog(@&quot;removeitematpath %@ error :%@&quot;, path, error);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    NSError *error = nil;</div><div class="line"> 	//文件保存到沙盒</div><div class="line">    _assetWriter = [[AVAssetWriter alloc] initWithURL:url fileType:AVFileTypeQuickTimeMovie error:&amp;error];</div><div class="line">    </div><div class="line">    </div><div class="line">    //AVVideoAverageBitRateKey，每秒钟多少bits，仅用于H264</div><div class="line">    int bitRate = 256 * 1024;  </div><div class="line">    </div><div class="line">    NSDictionary *codecSettings = [NSDictionary dictionaryWithObjectsAndKeys:</div><div class="line">                                   [NSNumber numberWithInt:bitRate], AVVideoAverageBitRateKey,</div><div class="line">                                   nil];</div><div class="line">   </div><div class="line">    NSDictionary *videoSettings = [NSDictionary dictionaryWithObjectsAndKeys:</div><div class="line">                                   AVVideoCodecH264, AVVideoCodecKey,</div><div class="line">                                   [NSNumber numberWithInt:480], AVVideoWidthKey,</div><div class="line">                                   [NSNumber numberWithInt:320], AVVideoHeightKey,</div><div class="line">                                   codecSettings, AVVideoCompressionPropertiesKey,</div><div class="line">                                   nil];</div><div class="line">    </div><div class="line">    _videoWriterInput = [AVAssetWriterInput assetWriterInputWithMediaType:AVMediaTypeVideo outputSettings:videoSettings];</div><div class="line">    </div><div class="line">    _videoWriterInput.expectsMediaDataInRealTime = YES;</div><div class="line">    </div><div class="line"></div><div class="line">    [_assetWriter addInput:_videoWriterInput];</div><div class="line">    </div><div class="line">    </div><div class="line">    return _assetWriter;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>六、代理中写入文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">-(void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection</div><div class="line">&#123;</div><div class="line">    </div><div class="line">    if(!CMSampleBufferDataIsReady(sampleBuffer))&#123;</div><div class="line">        NSLog( @&quot;sample buffer is not ready. Skipping sample&quot; );</div><div class="line">        return;</div><div class="line">    &#125;</div><div class="line">        </div><div class="line">    //设置写入器的写入时间，开启写入</div><div class="line">    if (_assetWriter.status == AVAssetWriterStatusUnknown)</div><div class="line">    &#123;</div><div class="line">        CMTime startTime = CMSampleBufferGetPresentationTimeStamp(sampleBuffer);</div><div class="line">        </div><div class="line">        [_assetWriter startWriting];</div><div class="line">        [_assetWriter startSessionAtSourceTime:startTime];</div><div class="line">        //此时_assetWriter.status为1</div><div class="line">        NSLog(@&quot;%ld&quot;,(long)_assetWriter.status);</div><div class="line"></div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    if(_assetWriter.status == AVAssetWriterStatusFailed)&#123;</div><div class="line">        </div><div class="line">        NSLog(@&quot;error - %@&quot;,_assetWriter.error);</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">    //判断如果正在读取，则直接写入</div><div class="line">    if(_assetWriter.status == AVAssetWriterStatusWriting)&#123;</div><div class="line">        //写入视频</div><div class="line">        if([captureOutput isKindOfClass:[_videoOutput class]])&#123;</div><div class="line">            </div><div class="line">            [_videoWriterInput appendSampleBuffer:sampleBuffer];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>七、上传服务器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">-(void)uploadDataToServer&#123;</div><div class="line"></div><div class="line">    //字符串乱序</div><div class="line">    NSString *fineNameString = [[NSString alloc]init];</div><div class="line">    for (int i = 0; i &lt; 32; i++) &#123;</div><div class="line">        int number = arc4random() % 36;</div><div class="line">        if (number &lt; 10) &#123;</div><div class="line">            int figure = arc4random() % 10;</div><div class="line">            NSString *tempString = [NSString stringWithFormat:@&quot;%d&quot;, figure];</div><div class="line">            fineNameString = [fineNameString stringByAppendingString:tempString];</div><div class="line">        &#125;else &#123;</div><div class="line">            int figure = (arc4random() % 26) + 97;</div><div class="line">            char character = figure;</div><div class="line">            NSString *tempString = [NSString stringWithFormat:@&quot;%c&quot;, character];</div><div class="line">            fineNameString = [fineNameString stringByAppendingString:tempString];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    //通过AFN上传数据到服务器</div><div class="line">    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];</div><div class="line">    </div><div class="line">    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@&quot;application/json&quot;, @&quot;text/html&quot;, @&quot;image/jpeg&quot;,  @&quot;image/png&quot;, @&quot;application/octet-stream&quot;, @&quot;text/json&quot;, @&quot;video/mov&quot;, nil];</div><div class="line">    </div><div class="line">    manager.responseSerializer = [AFHTTPResponseSerializer serializer];</div><div class="line">    manager.requestSerializer = [AFHTTPRequestSerializer serializer];</div><div class="line">    //服务器地址</div><div class="line">    NSString *uploadAddress = @&quot;http://188.188.188.188:10898/video&quot;;    </div><div class="line">    </div><div class="line">    [manager POST:uploadAddress parameters:nil constructingBodyWithBlock:^(id&lt;AFMultipartFormData&gt;  _Nonnull formData) &#123;</div><div class="line">        NSString  *path = [NSHomeDirectory() stringByAppendingPathComponent:@&quot;tmp/xxx.mov&quot;];</div><div class="line">        NSData *videoData = [NSData dataWithContentsOfFile:path];</div><div class="line"> </div><div class="line">        NSString *fileName = [NSString stringWithFormat:@&quot;%@.mov&quot;,fineNameString];</div><div class="line">        //formData的其他append方法上传文件失败</div><div class="line">        [formData appendPartWithFileData:videoData name:@&quot;xxx.mov&quot; fileName:fileName mimeType:@&quot;video/mov&quot;];</div><div class="line">        </div><div class="line">    &#125; progress:^(NSProgress * _Nonnull uploadProgress) &#123;</div><div class="line">        </div><div class="line">    &#125; success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) &#123;</div><div class="line">        NSLog(@&quot;视频上传成功 %@&quot;, responseObject);</div><div class="line">        </div><div class="line">    &#125; failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) &#123;</div><div class="line">        NSLog(@&quot;视频上传失败 %@&quot;, error);</div><div class="line">        </div><div class="line">    &#125;];</div><div class="line">    </div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/iOS/" rel="tag">#iOS</a>
+          
+            <a href="/tags/技术/" rel="tag">#技术</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/13/ssh 和 sftp/" rel="next" title="ssh 和 sftp">
+                <i class="fa fa-chevron-left"></i> ssh 和 sftp
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/14/设置导航控制器/" rel="prev" title="设置导航控制器">
+                设置导航控制器 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+<!-- 多说评论框 start -->  
+        <div class="ds-thread" data-thread-key="<%- page.path %>" data-title="<%- page.title %>" data-url="<%- page.permalink %>"></div>  
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"luoxinin"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="LuoXin" />
+          <p class="site-author-name" itemprop="name">LuoXin</p>
+          <p class="site-description motion-element" itemprop="description">学习是一种生活方式!!</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">34</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">LuoXin</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
