@@ -4,14 +4,6 @@
         "details": [
             {
                 "appID": "C9FFFSJTPJ.com.blinghour.appbuyy",
-                "paths": [ "/wwdc/news/", "/videos/wwdc/2015/*"]
-            },
-            {
-                "appID": "C9FFFSJTPJ.com.blinghour.appbuyy",
-                "paths": [ "*" ]
-            },
-            {
-                "appID": "C9FFFSJTPJ.com.BlingHour.appbuy",
                 "paths": [ "*" ]
             }
         ]
