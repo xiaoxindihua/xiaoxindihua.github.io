@@ -5,6 +5,10 @@
             {
                 "appID": "C9FFFSJTPJ.com.blinghour.appbuyy",
                 "paths": [ "*" ]
+            },
+	    {
+                "appID": "C9FFFSJTPJ.com.BlingHour.appbuy",
+                "paths": [ "*" ]
             }
         ]
     }
