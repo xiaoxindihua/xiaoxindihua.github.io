@@ -1,22 +1,19 @@
 {
-  "applinks": {
-      "details": [
-           {
-             "appIDs": [ "C9FFFSJTPJ.com.blinghour.appbuyy", "V8TA6A2VT6.com.blinghour.appbuyy" ],
-             "components": [
-               
-               
-               {
-                  "/": "*",
-                  "exclude": true,
-                  "comment": "Matches any URL whose path starts with /help/website/ and instructs the system not to open it as a universal link"
-               }
-               
-             ]
-           }
-       ]
-   },
-   "webcredentials": {
-      "apps": [ "C9FFFSJTPJ.com.blinghour.appbuyy" ]
-   }
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "C9FFFSJTPJ.com.blinghour.appbuyy",
+                "paths": [ "/wwdc/news/", "/videos/wwdc/2015/*"]
+            },
+            {
+                "appID": "C9FFFSJTPJ.com.blinghour.appbuyy",
+                "paths": [ "*" ]
+            },
+            {
+                "appID": "C9FFFSJTPJ.com.BlingHour.appbuy",
+                "paths": [ "*" ]
+            }
+        ]
+    }
 }
