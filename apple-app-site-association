@@ -1,0 +1,15 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "C9FFFSJTPJ.com.blinghour.appbuyy",
+                "paths": [ "*" ]
+            },
+	    {
+                "appID": "V8TA6A2VT6.com.blinghour.appbuyy",
+                "paths": [ "*" ]
+            }
+        ]
+    }
+}
