@@ -4,11 +4,11 @@
         "details": [
             {
                 "appID": "C9FFFSJTPJ.com.blinghour.appbuyy",
-                "paths": [ "*" ]
+                "paths": [ "/*" ]
             },
 	    {
                 "appID": "C9FFFSJTPJ.com.BlingHour.appbuy",
-                "paths": [ "*" ]
+                "paths": [ "/*" ]
             }
         ]
     }
